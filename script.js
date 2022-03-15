@@ -29,8 +29,8 @@ buttonSettings.addEventListener( "click", function () {
 function normalizeInput() {
     seconds.value = parseInt(seconds.value);
     if (isNaN(seconds.value)) seconds.value = 0;
-    if (seconds.value > +seconds.max) seconds.value = seconds.max;
-    if (seconds.value <= +seconds.min) seconds.value = seconds.min;
+    if (seconds.value > parseInt(seconds.max)) seconds.value = seconds.max;
+    if (seconds.value <= parseInt(seconds.min)) seconds.value = seconds.min;
     if (seconds.value < 10) seconds.value = "0" + seconds.value;
 
     minutes.value = parseInt(minutes.value);
