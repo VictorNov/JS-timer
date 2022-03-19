@@ -31,13 +31,13 @@ function normalizeInput() {
     if (isNaN(seconds.value)) seconds.value = 0;
     if (seconds.value > parseInt(seconds.max)) seconds.value = seconds.max;
     if (seconds.value <= parseInt(seconds.min)) seconds.value = seconds.min;
-    if (seconds.value < 10) seconds.value = "0" + seconds.value;
+    seconds.value = ("0" + seconds.value).slice(-2);
 
     minutes.value = parseInt(minutes.value);
     if (isNaN(minutes.value)) minutes.value = 0;
     if (minutes.value > +minutes.max) minutes.value = minutes.max;
     if (minutes.value <= +minutes.min) minutes.value = minutes.min;
-    if (minutes.value < 10) minutes.value = "0" + minutes.value;
+    minutes.value = ("0" + minutes.value).slice(-2);
 }
 
 buttonStart.addEventListener( "click", function () {
