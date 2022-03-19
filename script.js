@@ -78,7 +78,7 @@ function timerFunction(time) {
         --time;
 
         // записываем значения оставшегося времени в поля ввода
-        minutes.value = Math.trunc(time / 60 % 60);
+        minutes.value = Math.floor(time / 60);
         seconds.value = Math.trunc(time % 60);
 
         // если значения меньше 10 - нужно добавить 0 в начало
